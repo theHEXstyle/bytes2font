@@ -2,20 +2,19 @@
 # The concept is the make sure that the characters are properly encoded
 # before they are rendered by the display
 
-#The ONLY assumption that the code does is:
-#    each line of the .cpp file corresponds to a character line
 
-# input:  a .cpp font file
+# input:  
+## a .cpp font file
+## update the file name and the font width
 # output: an image rendition of the font (not an actual font)
-
-
-HEX_PER_LINE = 3  # <------------------------- change how many hexes constitute a font line (usually 3)
 
 from PIL import Image
 import numpy as np
 import re
 
+FONT_WIDTH = 22   # <----------------------------- how many pixel is the font wide (NOTE, NOT the font height or size)
 filename = './input/FontReg36.cpp'  #<----------- change file name!
+HEX_PER_LINE = int(np.ceil(FONT_WIDTH / 8))  # how many bytes are required for each line
 
 font_image = []
 
