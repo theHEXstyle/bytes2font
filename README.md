@@ -7,9 +7,9 @@ Opposite of this project can be found with [font2bytes](https://github.com/theHE
 
 ---
 ## Usage:
-Simply put the .cpp file in the input folder
-
-update the code with your file name and specify how mane hexes constitue a font line (usually 3)
-
-run, and get the .png file in the output foler
+1. Simply put the .cpp file in the input folder
+2. update the code with:
+    * your file name 
+    * font width (not size): how many pixels is each font line composed of (should be written in the .cpp file)
+3. run, and get the .png file in the output foler
 
